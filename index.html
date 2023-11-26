@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Scraper</title>
+</head>
+<body>
+    <form method="post">
+        <label for="url">URL:</label>
+        <input type="url" id="url" name="url" required><br>
+        <label for="keyword">Keyword:</label>
+        <input type="text" id="keyword" name="keyword" required><br>
+        <label for="tag">Tag:</label>
+        <label>Tags:</label><br>
+            <input type="checkbox" id="p" name="tag" value="p">
+            <label for="p">p</label><br>
+            <input type="checkbox" id="div" name="tag" value="div">
+            <label for="div">div</label><br>
+            <input type="checkbox" id="span" name="tag" value="span">
+            <label for="span">span</label><br>
+            <input type="checkbox" id="h1" name="tag" value="h1">
+            <label for="h1">h1</label><br>
+            <!-- 他のタグも追加可能 -->
+        </select><br>
+        <button type="submit">スクレイピングを開始</button>
+    </form>
+    {% if message %}
+    <p>{{ message }}</p>
+    {% endif %}
+</body>
+</html>
